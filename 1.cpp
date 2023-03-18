@@ -67,7 +67,7 @@ cout<<"\nEnter the index you want to insert the value at: ";
 cin>>index;
 cout<<"Enter the Value you want to insert on position "<<index<<" of the array:";
 cin>>value;
-    for(int i=11;i>=index-1;i--)
+    for(int i=arraySize;i>=index-1;i--)
         array[i] = array[i-1];
     array[index-1] = value;
 arraySize++;
@@ -81,7 +81,7 @@ printArray(array);
     int index;
     cout<<"\nEnter the index you want to delete: ";
     cin>>index;
-    for(int i=index-1;i<11;i++)
+    for(int i=index-1;i<arraySize;i++)
         array[i] = array[i+1];
     arraySize=arraySize-1;
     cout<<"Value deleted!\nArray:";
